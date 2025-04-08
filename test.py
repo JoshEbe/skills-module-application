@@ -10,19 +10,26 @@ if operator == "+":
     result = num1 + num2
 
 #subtraction
-if operator == "-":
+elif operator == "-":
     result = num1 - num2
 
 #multiplication
-if operator == "*":
+elif operator == "*":
     result = num1 * num2
 
 #division
-if operator == "/":
-    result = num1 / num2
+elif operator == "/":
+    if num2 != 0:
+        result = num1 / num2
+    else:
+        result = "Cannot divide by zero!"
 
 #exponent
-if operator == "^":
+elif operator == "^":
     result = num1 ** num2
+
+#if the user enters something not in the list as an operator
+else: 
+    result = "Invalid operation!"
 
 print("Result:", result)
